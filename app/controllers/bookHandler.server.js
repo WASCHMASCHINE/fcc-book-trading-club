@@ -37,8 +37,6 @@ function BookHandler(){
 
     
     this.getAllBooks = function(req, res){
-        console.log("Inside /all books")
-        console.log("process.env.MONGO_URI", process.env.MONGO_URI)
         mongo.connect(process.env.MONGO_URI, function(err, db){
                 console.log("yes! connected to mongo")
                 if (err){
